@@ -1,6 +1,7 @@
 const { pool } = require('../config/db');
 const authService = require('../services/authService');
 
+
 // Create a new user
 exports.register = async (req, res) => {
     try {
