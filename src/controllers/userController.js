@@ -1,19 +1,27 @@
-const pool = require('../config/db');
+const { pool } = require('../config/db');
+const authService = require('../services/authService');
 
 // Create a new user
-exports.createUser = async (req, res) => {
-  try {
-    const { name, email, password, role, phone } = req.body;
-    const result = await pool.query(
-      'INSERT INTO users (name, email, password, role, phone) VALUES ($1, $2, $3, $4, $5) RETURNING *',
-      [name, email, password, role, phone]
-    );
-    res.status(201).json(result.rows[0]);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Error creating user' });
-  }
+exports.register = async (req, res) => {
+    try {
+        const user = await authService.registerUser(req.body); 
+        res.status(201).json({ message: 'User registered successfully', user });
+    } catch(error){
+        res.status(400).json({ error: error.message });
+    }
 };
+
+exports.login = async (req, res) => {
+    try {
+        const { token, user } = await authService.loginUser(req.body);
+        console.log(token);
+        console.log(user);
+        res.status(200).json({message: 'Login successful', token, user})
+    } catch(error){
+        res.status(401).json({ error: error.message });
+    }
+};
+
 
 // Fetch all users
 exports.getUsers = async (req, res) => {
@@ -25,3 +33,4 @@ exports.getUsers = async (req, res) => {
     res.status(500).json({ error: 'Error fetching users' });
   }
 };
+

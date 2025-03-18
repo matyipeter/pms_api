@@ -12,7 +12,7 @@ app.use(express.json()); // Important: Parse JSON request bodies
 
 // Routes
 app.use("/api/auth", authRoutes);
-app.use("api/user", userRoutes);
+app.use("/api/user", userRoutes);
 
 module.exports = app;
 

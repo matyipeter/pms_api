@@ -1,1 +1,47 @@
+# Node.js dependencies
 node_modules/
+package-lock.json
+npm-debug.log*
+yarn.lock
+
+# Environment variables (Sensitive information)
+.env
+
+# Database dumps and migrations
+dump.sql
+migrations/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+
+# IDE/Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Cache and build output
+dist/
+build/
+coverage/
+.cache/
+tmp/
+out/
+
+# Docker (if using Docker)
+docker-compose.override.yml
+.dockerignore
+
+# PostgreSQL artifacts (optional)
+pgdata/
+
