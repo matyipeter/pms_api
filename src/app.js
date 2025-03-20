@@ -1,8 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const authRoutes = require("./routes/authRoutes");
-const userRoutes = require("./routes/userRoutes");
+const authRoutes = require("./modules/auth/authRoutes");
 
 const app = express();
 
@@ -12,7 +11,6 @@ app.use(express.json()); // Important: Parse JSON request bodies
 
 // Routes
 app.use("/api/auth", authRoutes);
-app.use("/api/user", userRoutes);
 
 module.exports = app;
 

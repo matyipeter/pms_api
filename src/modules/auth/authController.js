@@ -1,5 +1,5 @@
-const { pool } = require('../config/db');
-const authService = require('../services/authService');
+const { pool } = require('../../config/db');
+const authService = require('./authService');
 
 
 // Create a new user
@@ -34,4 +34,3 @@ exports.getUsers = async (req, res) => {
     res.status(500).json({ error: 'Error fetching users' });
   }
 };
-
