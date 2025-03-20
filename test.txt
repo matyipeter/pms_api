@@ -1,0 +1,22 @@
+{
+    "name" : "Hill house 2",
+    "address" : "2st street 2.",
+    "city" : "LA",
+    "state" : "California",
+    "zipcode" : "2023",
+    "status" : "available",
+    "property_type" : "apartment"
+}
+
+
+{
+    "name" : "Johnson",
+    "email" :"johntheowner@gmail.com",
+    "password":"Jani55",
+    "role" : "owner",
+    "phone" : "20303030"
+}
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsInJvbGUiOiJvd25lciIsImlhdCI6MTc0MjQ4MDY0MiwiZXhwIjoxNzQyNDg0MjQyfQ.y_VMdlXw8OLbCoK5SfE_VCEdmSMMRT-rPKEO1jNCFRU
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MjQ4MTY1MSwiZXhwIjoxNzQyNDg1MjUxfQ.tJeXIcGYbTWIa2D40-HW5JBxVao4GhTxjE0z2c3-Fmo

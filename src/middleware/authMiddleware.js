@@ -24,6 +24,11 @@ const verifyToken = (req, res, next) => {
 
 const requireRole = (role) => {
     return (req, res, next) => {
+      if (req.user.role === 'admin'){
+        next();
+        return;
+      }
+      
       if (req.user.role !== role) {
         return res.status(403).json({ error: 'Forbidden: Access denied' });
       }
