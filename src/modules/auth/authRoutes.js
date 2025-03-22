@@ -10,6 +10,10 @@ router.post("/register", authController.register);
 // POST /api/auth/login
 router.post("/login", authController.login);
 
+router.post("/generateResetToken", authController.generateResetToken);
+
+router.post("/resetPassword", authController.resetPassword);
+
 router.get("/getall", verifyToken, requireRole('admin'), authController.getUsers);
 
 module.exports = router;
